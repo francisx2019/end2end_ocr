@@ -1,0 +1,94 @@
+DATASET:
+  img_mode: "RGB"
+  ignore_tags: ['*', '###']
+  datasets_path: 'D:\workspace\DATA\det'
+  use_curved_text: False
+  datasets_len: 0
+  train_dataset_path: 'D:\workspace\DATA\det\train.txt'
+  train_filter_keys: ["img_path", "img_name", "text_polys", "text", "ignore_tags", "shape"]
+  test_dataset_path: 'D:\workspace\DATA\det\test.txt'
+  test_filter_keys: []  # after preprocess, don't need info
+
+  AUGMENTATION:
+    # EastRandomCropData params
+    random_crop_size: [1024, 1024]
+    random_crop_max_tries: 50
+    random_crop_keep_ratio: True
+    random_crop_min_crop_side_ratio: 0.25
+    random_crop_require_original_image: False
+
+    # MakeBorderMap params
+    make_border_shrink_ratio: 0.4
+    make_border_thresh_min: 0.3
+    make_border_thresh_max: 0.7
+
+    # MakeShrinkMap params
+    make_shrink_shrink_ratio: 0.4         # text shrink ratio
+    make_shrink_min_text_size: 8
+    make_shrink_shrink_type: "pyclipper"  # text shrink function
+
+    # ResizeShortSize params
+    resize_short_size: 1024
+    resize_text_polys: False              # shrink for test image yes or no
+
+NETWORK:
+  backbone_type: "atros_resnet18"         # 使用的backbone类型
+  backbone_pretrained: True               # 是否使用预训练模型,默认使用
+  backbone_in_channels: 3                 # 输入图片的格式,GRAY格式图片需设置为1
+
+  neck_type: "SPP"                        # neck 网络
+  neck_inner_channels: 256                # neck网络channels
+
+  head_type: "DBHead"                     # head头,即检测头
+  head_k: 50                              # 可微分二值化计算参数
+  head_smooth: False                      # 是否对转置卷积结果进行平滑处理
+
+TRAIN:
+  ID_GPU: '0'
+  random_seed: 2021
+  opti_lr: 0.001
+  lr_scheduler_type: "WarmupPolyLR"
+  lr_scheduler_warmup_epoch: 5
+  lr_scheduler_last_epoch: 0
+  opti_weight_decay: 0
+  opti_amsgrad: True
+  epochs: 100
+  batch_size: 1
+  num_workers: 4
+  train_output_dir: 'result'
+#  train_resume_checkpoint: 'DBnet/result/DBNet_atros_resnet18_SPP_DBHead/checkpoints/model_latest.pth'
+  train_resume_checkpoint: ''
+  train_finetune_checkpoint: ''
+
+  loss_alpha: 1.0               # 分类损失权重
+  loss_beta: 10.0               # l1 loss权重
+  loss_ohem: 3                  # OHEM参数
+
+  train_log_iter: 10
+
+  post_processing_thresh: 0.3
+  post_processing_box_thresh: 0.7
+  post_processing_max_candidates: 1000
+  post_processing_unclip_ratio: 1.5
+  post_processing_type: "SegDetectorRepresenter"
+
+  metric_type: "QuadMetric"
+  metric_is_output_polygon: True
+
+EVAL:
+  batch_size: 1
+
+  # 后处理函数参数
+  post_processing:
+    args:
+      thresh: 0.3
+      box_thresh: 0.7
+      max_candidates: 1000
+      unclip_ratio: 1.5
+    type: "SegDetectorRepresenter"
+
+  # 评价函数参数
+  metric:
+    args:
+      is_output_polygon: True
+    type: "QuadMetric"

@@ -1,0 +1,46 @@
+DATASET:
+  dataname: 'own'
+  ALPHABETS: ''
+  character_file: 'data/char_std_5990.txt'
+  train: 'data/train.txt'
+  val: 'data/test.txt'
+  mean: 0.588
+  std: 0.193
+
+
+MODEL:
+  NUM_CLASSES: 0
+  NUM_HIDDEN: 256
+  random_sample: True
+  img_size:
+    h: 32
+    w: 160
+
+
+
+TRAIN:
+  log_path: 'result'
+  batch_size: 16
+  epochs: 300
+  lr: 0.0005
+  weight_decay: 0.0
+  lr_step: [60, 80, 100]
+  lr_factor: 0.1
+  begin_epoch: 0
+  print_freq: 200
+  save_freq: 50
+#  finetune_file: 'result/checkpoint/mixed_second_finetune_acc_97P7.pth'
+  finetune_file: ''
+  finetune_freeze: False
+  resume_file: '/models/Recognization/best_model.pth'
+
+
+VAL:
+  batch_size: 8
+  NUM_TEST_BATCH: 1000
+  BATCH_SIZE_PER_GPU: 16
+  NUM_TEST_DISP: 10
+
+INFER:
+  batch_size: 10
+  data_dir: 'CRNN_CTC/data/test_images/*'

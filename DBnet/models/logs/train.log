@@ -1,0 +1,38 @@
+2021-02-22 11:17:25,478 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 11:17:27,815 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\models\DBNet_atros_resnet18_SPP_DBHead\checkpoints\model_latest.pth
+2021-02-22 11:33:00,968 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 11:33:02,090 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\models\DBNet_atros_resnet18_SPP_DBHead\checkpoints\best_model.pth
+2021-02-22 11:36:22,821 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 11:36:23,888 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\models\DBNet_atros_resnet18_SPP_DBHead\checkpoints\best_model.pth
+2021-02-22 11:45:52,663 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 11:45:53,718 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\models\DBNet_atros_resnet18_SPP_DBHead\checkpoints\best_model.pth
+2021-02-22 11:50:34,663 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 11:50:35,712 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\models\DBNet_atros_resnet18_SPP_DBHead\checkpoints\best_model.pth
+2021-02-22 11:52:54,423 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 11:52:55,503 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\models\DBNet_atros_resnet18_SPP_DBHead\checkpoints\best_model.pth
+2021-02-22 12:00:49,458 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 12:00:50,522 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\models\DBNet_atros_resnet18_SPP_DBHead\checkpoints\best_model.pth
+2021-02-22 13:44:41,276 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 13:44:42,415 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\result\DBNet_atros_resnet18_SPP_DBHead\checkpoints\best_model.pth
+2021-02-22 13:45:36,577 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 13:45:37,663 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\result\DBNet_atros_resnet18_SPP_DBHead\checkpoints\model_latest.pth
+2021-02-22 14:01:18,549 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 14:01:19,679 DBNet.pytorch INFO: Loading checkpoint:D:\workspace\OCR_server\DBnet\result\DBNet_atros_resnet18_SPP_DBHead\checkpoints\model_latest.pth
+2021-02-22 14:02:09,586 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-22 14:02:10,652 DBNet.pytorch INFO: train dataset has 80 samples,80 in dataloader, validate dataset has 7940 samples,7940 in dataloader
+2021-02-22 14:02:23,322 DBNet.pytorch INFO: [1/100], [10/80], global_step: 10, speed: 0.8 samples/sec, acc: 0.5128, iou_shrink_map: 0.1169, loss: 3.1716loss_shrink_maps: 1.0374, loss_threshold_maps: 0.1238, loss_binary_maps: 0.8959, , lr:0.000348333, time:12.67
+2021-02-22 14:02:26,952 DBNet.pytorch INFO: [1/100], [20/80], global_step: 20, speed: 2.8 samples/sec, acc: 0.5342, iou_shrink_map: 0.1096, loss: 2.9653loss_shrink_maps: 0.9307, loss_threshold_maps: 0.1174, loss_binary_maps: 0.8601, , lr:0.000365, time:3.63
+2021-02-22 14:02:30,726 DBNet.pytorch INFO: [1/100], [30/80], global_step: 30, speed: 2.6 samples/sec, acc: 0.5396, iou_shrink_map: 0.0961, loss: 2.9498loss_shrink_maps: 0.8796, loss_threshold_maps: 0.1127, loss_binary_maps: 0.9430, , lr:0.000381667, time:3.77
+2021-02-22 14:02:34,303 DBNet.pytorch INFO: [1/100], [40/80], global_step: 40, speed: 2.8 samples/sec, acc: 0.5438, iou_shrink_map: 0.0894, loss: 2.9442loss_shrink_maps: 0.8657, loss_threshold_maps: 0.1175, loss_binary_maps: 0.9039, , lr:0.000398333, time:3.58
+2021-02-22 14:02:37,894 DBNet.pytorch INFO: [1/100], [50/80], global_step: 50, speed: 2.8 samples/sec, acc: 0.5485, iou_shrink_map: 0.0891, loss: 2.8177loss_shrink_maps: 0.8547, loss_threshold_maps: 0.1100, loss_binary_maps: 0.8626, , lr:0.000415, time:3.59
+2021-02-22 14:02:41,492 DBNet.pytorch INFO: [1/100], [60/80], global_step: 60, speed: 2.8 samples/sec, acc: 0.5512, iou_shrink_map: 0.0890, loss: 2.6783loss_shrink_maps: 0.8294, loss_threshold_maps: 0.1108, loss_binary_maps: 0.7413, , lr:0.000431667, time:3.60
+2021-02-22 14:02:45,103 DBNet.pytorch INFO: [1/100], [70/80], global_step: 70, speed: 2.8 samples/sec, acc: 0.5556, iou_shrink_map: 0.0941, loss: 2.9014loss_shrink_maps: 0.8133, loss_threshold_maps: 0.1240, loss_binary_maps: 0.8476, , lr:0.000448333, time:3.61
+2021-02-22 14:02:48,676 DBNet.pytorch INFO: [1/100], [80/80], global_step: 80, speed: 2.8 samples/sec, acc: 0.5685, iou_shrink_map: 0.1138, loss: 2.6115loss_shrink_maps: 0.8057, loss_threshold_maps: 0.1064, loss_binary_maps: 0.7421, , lr:0.000465, time:3.57
+2021-02-22 14:02:48,852 DBNet.pytorch INFO: [1/100], train_loss: 3.0760, time: 38.1983, lr: 0.00046499999999999997
+2021-02-23 09:45:29,456 DBNet.pytorch INFO: train with device cuda:0 and pytorch 1.7.1
+2021-02-23 09:45:31,683 DBNet.pytorch INFO: train dataset has 80 samples,80 in dataloader, validate dataset has 7940 samples,7940 in dataloader
+2021-02-23 09:45:47,052 DBNet.pytorch INFO: [1/100], [10/80], global_step: 10, speed: 0.7 samples/sec, acc: 0.4859, iou_shrink_map: 0.1481, loss: 4.0296loss_shrink_maps: 1.0627, loss_threshold_maps: 0.2006, loss_binary_maps: 0.9608, , lr:0.000348333, time:15.37
+2021-02-23 09:45:50,918 DBNet.pytorch INFO: [1/100], [20/80], global_step: 20, speed: 2.6 samples/sec, acc: 0.5348, iou_shrink_map: 0.1297, loss: 2.9748loss_shrink_maps: 0.9527, loss_threshold_maps: 0.1160, loss_binary_maps: 0.8622, , lr:0.000365, time:3.86
+2021-02-23 09:45:54,758 DBNet.pytorch INFO: [1/100], [30/80], global_step: 30, speed: 2.6 samples/sec, acc: 0.5392, iou_shrink_map: 0.1066, loss: 2.9574loss_shrink_maps: 0.8879, loss_threshold_maps: 0.1120, loss_binary_maps: 0.9495, , lr:0.000381667, time:3.84
+2021-02-23 09:45:58,557 DBNet.pytorch INFO: [1/100], [40/80], global_step: 40, speed: 2.6 samples/sec, acc: 0.5408, iou_shrink_map: 0.0941, loss: 2.8649loss_shrink_maps: 0.8492, loss_threshold_maps: 0.1129, loss_binary_maps: 0.8865, , lr:0.000398333, time:3.80
+2021-02-23 09:46:02,397 DBNet.pytorch INFO: [1/100], [50/80], global_step: 50, speed: 2.6 samples/sec, acc: 0.5403, iou_shrink_map: 0.0867, loss: 2.7105loss_shrink_maps: 0.8340, loss_threshold_maps: 0.1145, loss_binary_maps: 0.7317, , lr:0.000415, time:3.84

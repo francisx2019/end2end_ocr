@@ -1,0 +1,54 @@
+DATASET:
+  dataname: 'own' # 360, own
+  ALPHABETS: ''
+  character_file: 'data/char_std_5990.txt'
+  train: 'data/train.txt'
+  val: 'data/test.txt'
+  mean: 0.588
+  std: 0.193
+
+
+MODEL:
+  model_arch: 'tf_mobilenetv3_large_075'
+  pretrained: True
+  NUM_CLASSES: 0
+  NUM_HIDDEN: 256
+  random_sample: True
+  img_size:
+    h: 32
+    w: 280
+
+
+
+TRAIN:
+  log_path: 'result'
+  batch_size: 64
+  epochs: 300
+  lr: 0.001
+  weight_decay: 0.0
+  lr_scheduler_type: 'WarmupPolyLR'  # MultiStepLR, CosineAnnealingWarmRestarts, WarmupPolyLR
+  T_0: 10
+  lr_min: 1e-6
+  lr_step: [60, 80, 120]
+  lr_scheduler_warmup_epoch: 5
+  lr_scheduler_last_epoch: 0
+  lr_factor: 0.1
+  begin_epoch: 0
+  print_freq: 100
+  save_freq: 50
+#  finetune_file: 'result/checkpoint/best_model.pth'
+  finetune_file: ''
+  finetune_freeze: False
+  resume_file: 'result/checkpoint/resnet_12_acc_0.7903.pth'
+#  resume_file: ''
+
+
+VAL:
+  batch_size: 4
+  NUM_TEST_BATCH: 1000
+  BATCH_SIZE_PER_GPU: 16
+  NUM_TEST_DISP: 10
+
+INFER:
+  batch_size: 8
+  data_dir: 'CRNN_CTC/data/test_images/*.jpg'
